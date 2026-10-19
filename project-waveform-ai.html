@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waveform.ai</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<a href="index.html">About</a>
+<a href="projects.html" aria-current="page">Projects</a>
+<a href="recordings.html">Recording Projects</a>
+</nav>
+<hr>
+
+<p><a href="projects.html">&larr; All projects</a></p>
+
+<h1>Waveform.ai</h1>
+<p>A synthesizer which aids new-user playability by translating language-based descriptions of a sound into a playable preset.</p>
+
+<img src="images/Synth.jpg" alt="The Waveform.ai synthesizer: a wooden enclosure with a touchscreen, three LCD displays, an LED matrix, and patchable equalizer, tremolo, wah, clipper and phaser modules">
+
+<h2>Overview</h2>
+<p>
+    Typical synthesizers offer the musician a table of wave shapes—which dictate the initial timbre of the sound—and further control over sonic characteristics through analog or digital wave-shaping effects. 
+    The Waveform.ai synthesizer advances user control by implementing artificial intelligence in the process of sound design. 
+    By providing the synthesizer with a language-based description of the a sound—for example "warm, soft, and short"—they will receive a tone which best matches the described sonority. 
+    This functionality relieves the user from the steep learning curve associated with sound design, opening the world of synthesis to beginner musicians. 
+ </p>
+
+ <p>
+    Waveform.ai was a multidisciplinary project supported by the William & Mary Arts and Science Exchange (ASE). 
+    The project consisted of an ambient, AI-driven synthesizer improvisation, a sensor-augmented flute performance, and concluded with a interactive live-coding finale. 
+ </p>
+
+ <p>
+   My contribution to this project was the analog electronics chain, as well as training the classification neural network.
+ </p>
+
+<h2>Design</h2>
+<p>I designed each circuit using SPICE simulations and breadboard prototyping. Once I verified the prototypes behaved as I intended, I designed PCB schematics in KiCAD to fit into the final synthesizer. Here are schematics of some of these circuits. </p>
+
+<div class="figures">
+<figure>
+<a href="images/eq-schematic.png"><img src="images/eq-schematic.png" alt="KiCad schematic of the equalizer circuit"></a>
+<figcaption class="caption">Equalizer: A high-pass, two band-pass, and low-pass filters user-adjustable by potentiometers.</figcaption>
+</figure>
+<figure>
+<a href="images/phaser-schematic.png"><img src="images/phaser-schematic.png" alt="KiCad schematic of the phaser circuit"></a>
+<figcaption class="caption">Phaser: An LFO drives two optocouplers which sweep phase-shifter stages, and the result is mixed with the dry signal through a depth control.</figcaption>
+</figure>
+<figure>
+<a href="images/phaser-pcb.png"><img src="images/phaser-pcb.png" alt="KiCad PCB layout of a single-stage phaser"></a>
+<figcaption class="caption">Phaser effect circuit PCB layout.</figcaption>
+</figure>
+<figure>
+<video class="video" controls preload="metadata">
+    <source src="videos/capstone.mp4" type="video/mp4">
+    <a href="videos/capstone.mp4">Download the capstone video</a>
+</video>
+<figcaption class="caption">Testing effect circuits during prototyping stage.</figcaption>
+</figure>
+
+</div>
+
+<p>
+    Once all circuits were printed, I assembled them into the wooden body of the synthesizer. The signal chain was modular, meaning a user can connect the effects to eachother in any order they want, using 1/4in patch cables.
+</p>
+
+<h2>Performance</h2>
+<p>The team didn't want our project to sit in a lab its whole life. We demonstrated a 10-minute improvised ambient performance on the instrument as part of the ASE event for an audience of over 150 members.</p>
+
+<iframe class="video" src="https://www.youtube-nocookie.com/embed/omBkMy99RT8" allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Waveform.ai synthesizer video"></iframe>
+<p><a href="https://www.youtube.com/watch?v=omBkMy99RT8">Watch on YouTube</a></p>
+</body>
+</html>
