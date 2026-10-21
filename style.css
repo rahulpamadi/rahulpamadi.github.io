@@ -35,7 +35,8 @@ hr {
 h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
 h2 { font-size: 1.2rem; margin-top: 2rem; }
 
-a { color: #0b5cad; }
+a, .link-style { color: #0b5cad; }
+.link-style { text-decoration: underline; }
 
 img {
   max-width: 100%;
@@ -110,7 +111,7 @@ h2 { clear: both; }
   nav a { color: #aaa; }
   nav a:hover, nav a[aria-current="page"] { color: #fff; }
   hr { border-top-color: #333; }
-  a { color: #6cb0f5; }
+  a, .link-style { color: #6cb0f5; }
   .caption { color: #999; }
 }
 
